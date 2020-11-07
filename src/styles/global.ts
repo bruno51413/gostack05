@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
+import githubBackground from '../assets/github-background.svg';
+
 export default createGlobalStyle`
   *{
     margin: 0;
@@ -9,7 +11,7 @@ export default createGlobalStyle`
   }
 
   body {
-    background: #F0F0F5;
+    background: #F0F0F5 url(${githubBackground}) no-repeat 70% top;
     -webkit-font-smoothing: antialiased;
   }
   body,input,button {
@@ -20,5 +22,9 @@ export default createGlobalStyle`
     max-width: 960px; //Define o máximo tamanho
     margin: 0 auto; //Centraliza
     padding: 40px 20px; //40px em cima e baixo e 20px na esquerda ou direita
+  }
+
+  button {
+    cursor: pointer;
   }
 `;
